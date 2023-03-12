@@ -13,21 +13,17 @@ void InsertionSort(int a[], int n){
 	}
 }
 
-int main(){
-	int a[50], i, n;
-	printf("Nhap mang : \n");
-	scanf("%d", &n);
-	printf("Nhap cac phan tu cua mang: \n");
-	for(i=0; i<n; i++){
-		scanf("%d", &a[i]);
-		if (a[i] == 0){
-			n = i;
-		}
-	}
-	InsertionSort(a, n);
-	printf("Mang sau khi sap xep la: \n");
-	for(i=0; i<n; i++){
-		printf("%d ", a[i]);
-	}
-	return 0;
+int main() {
+  int a[100], n, i;
+  for (i = 0; ; i++) {
+    printf("Nhap gia tri thu %d = ", i);
+    scanf("%d", &a[i]);
+    if (a[i] == 0) break;
+  }
+  n = i;
+  InsertionSort(a, n);
+  printf("Mang sau khi sap xep: ");
+  for (i = 0; i < n; i++)
+     printf("%d ", a[i]);
+  return 0;
 }
