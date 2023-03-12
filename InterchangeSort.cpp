@@ -22,12 +22,12 @@ void InterchangeSort(int a[], int n){
 int main()
 {
 	int a[50];
-	int n = 0;
-	for(i = 0; i < n; i++){
-		printf("Nhap phan tu thu a[%d]= \n", i);
+	for(i = 0; ; i++){
+		printf("Nhap phan tu thu a[%d]= ", i);
 		scanf("%d", &a[i]);
 		if(a[i] == 0) break;
 	}
+	n = i;
 	InterchangeSort(a, n);
 	printf("Mang sau khi sap xep: ");
 	for(i = 0; i < n; i++)
