@@ -21,21 +21,16 @@ void InterchangeSort(int a[], int n){
 
 int main()
 {
-	int a[100];
+	int a[50];
 	int n = 0;
-	printf("Nhap vao cac phan tu cua mang (ket thuc khi nhap 0): \n");
-	do{
-		scanf("%d", &a[n]);
-		n++;
-	}while (a[n-1] != 0);
-	printf("\nMang ban dau la: ");
-	for (int i = 0; i < n-1; i++){
-		printf("%d ", a[i]);
+	for(i = 0; i < n; i++){
+		printf("Nhap phan tu thu a[%d]= \n", i);
+		scanf("%d", &a[i]);
+		if(a[i] == 0) break;
 	}
-	InterchangeSort(a, n-1);
-	printf("\nMang sau khi xep la: ");
-	for(int i = 0; i < n-1; i++){
+	InterchangeSort(a, n);
+	printf("Mang sau khi sap xep: ");
+	for(i = 0; i < n; i++)
 		printf("%d ", a[i]);
-	}
 	return 0;
 }
