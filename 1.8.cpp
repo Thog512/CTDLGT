@@ -14,7 +14,7 @@ void Nhap(DuongThang &dt){
 }
 
 void Xuat(DuongThang dt){
-	printf("Duong thang: %dx + %dy + %d", dt.a, dt.b, dt.c);
+	printf("Duong thang: %dx + %dy + %d = 0", dt.a, dt.b, dt.c);
 }
 
 int main(){
