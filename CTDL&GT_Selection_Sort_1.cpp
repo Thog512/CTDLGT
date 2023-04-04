@@ -7,12 +7,15 @@ void swap(int &a, int &b){
 }
 
 void SelectionSort(int a[], int n){
-	int min;
-	for(int i=0; i<n-1; i++){
+	int min; //chỉ phần tử nhỏ nhất trong mảng
+	for(int i=0; i<n-1; i++) //sắp xếp theo chiều giảm dần
+	{ 
 		min = i;
-		for(int j=i+1; j<n; j++){
-			if(a[j] < a[min]){
-				swap(j, min);
+		for(int j=i+1; j<n; j++)
+		{ 
+			if(a[j] < a[min])
+			{ 
+				swap(j, min); //nhận vji trí min mới
 			}
 		}
 	}
