@@ -1,3 +1,5 @@
+//nguon: https://codelearn.io/learning/data-structure-and-algorithms/819552
+
 #include <stdio.h>
 
 int LinearSearch(int a[], int n, int x){
