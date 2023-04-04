@@ -1,4 +1,4 @@
-//nguon https://codelearn.io/learning/data-structure-and-algorithms/819552
+//nguon: https://codelearn.io/learning/data-structure-and-algorithms/819552
 
 int LinearSearch(int a[], int n, int x){
 	for(int i=0; i<n; i++){ // tìm kiếm lần lượt từng phần tử từ đầu mảng
