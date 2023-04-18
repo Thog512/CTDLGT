@@ -1,7 +1,7 @@
 #include <stdio.h>
+#define maxsize 6
 
-int maxsize = 8;
-int stack[8];
+int stack[maxsize];
 int top = -1;
 
 int isempty(){
@@ -12,15 +12,12 @@ int isempty(){
 }
 
 int isfull(){
-	if(top == maxsize){
+	if(top == maxsize-1){
 		return 1;
 	}else
 		return 0;
 }
 
-int peek(){
-	return stack[top];
-}
 
 int pop(){
 	int data;
@@ -43,23 +40,21 @@ int push(int data){
 }
 
 int main(){
-	push(7);
-	push(1);
-	push(2);
+	push(41);
+	push(23);
 	push(4);
-	push(5);
-	push(3);
-	push(9);
-	push(8);
+	push(14);
+	push(56);
+	push(1);
 
-	printf("Phan tu dau ngan xep la: %d\n", peek());
-	printf("Phan tu: ");
+
+	printf("Phan tu dau ngan xep la: %d\n", pop());
 	
-	while(!isempty()){
-		int data = pop();
-		printf("%d\n", data);
+	
+	printf("Phan tu con lai la: ");
+	for(int i=top; i>=0; i--){
+		printf("%d ", stack[i]);
 	}
-	
-	printf("Ngap xep day: %s\n", isfull()?"true":"false");
-	printf("Ngan xep trong: %s\n", isempty()?"true":"false");
+	return 0;
+
 }
